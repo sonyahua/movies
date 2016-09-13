@@ -8,7 +8,8 @@ API_KEY = '69f77b122c6932f085d9c8e992fe70ad'
 
 
 def search_movie_info():
-    """Fetches movie info from Movie Database"""
+    """The function fetches movie info from Movie Database API based on movie ID of selected movies.
+    Next it populates an array called listOfMovies with movie info."""
     
     # tmdb IDs for selected movies
     edge_of_tomorrow_id = '137113'
@@ -26,7 +27,7 @@ def search_movie_info():
     # connect with API for each movie id and retreive title, year, storyline, poster path, and trailer path
     for movie_id in MovieNames:
         connection=urllib2.urlopen("https://api.themoviedb.org/3/movie/" + movie_id + "?api_key=" + API_KEY + "&append_to_response=trailers")
-        output=connection.read()
+        output = connection.read()
         json_output = json.loads(output)
 
         title = (json_output['title'])
