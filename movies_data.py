@@ -19,7 +19,7 @@ def search_movie_info():
     young_adult_id ='57157'
 
     # Store movie IDs in an array/list
-    MovieNames = [edge_of_tomorrow_id, furious_7_id, joy_id, star_trek_beyond_id,young_adult_id,whiplash_id]
+    MovieNames = [edge_of_tomorrow_id, furious_7_id, joy_id, star_trek_beyond_id, young_adult_id, whiplash_id]
         
     listOfMovies = []   # create an empty array that will be populated with below info
 
@@ -41,7 +41,8 @@ def search_movie_info():
         
         # Populate the array with the movie info
         listOfMovies.append(movie)
-
+        
+    # Print out data in listofMovies array
     for movie in listOfMovies:
         print(movie.title)
         print(movie.year)
@@ -52,5 +53,5 @@ def search_movie_info():
     # create a webpage of movies
     fresh_tomatoes.open_movies_page(listOfMovies)
 
+#run the function
 search_movie_info()
-
